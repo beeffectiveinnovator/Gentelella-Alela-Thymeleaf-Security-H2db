@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="https://www.thymeleaf.org"
+	xmlns:sec="https://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<!-- /* 
+	https://o7planning.org/en/12369/thymeleaf-page-layouts-tutorial
+	https://dzone.com/articles/spring-boot-thymeleaf-template-decorator-using-thy 
+	*/ -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- Meta, title, CSS, favicons, etc. -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title layout:title-pattern="$CONTENT_TITLE - $LAYOUT_TITLE">Gentelella
+	Alela! |</title>
+
+<!-- Bootstrap -->
+<link th:href="@{/vendors/bootstrap/dist/css/bootstrap.min.css}"
+	rel="stylesheet">
+<!-- Font Awesome -->
+<link th:href="@{/vendors/font-awesome/css/font-awesome.min.css}"
+	rel="stylesheet">
+<!-- NProgress -->
+<link th:href="@{/vendors/nprogress/nprogress.css}" rel="stylesheet">
+<!-- jQuery custom content scroller -->
+<link
+	th:href="@{/vendors/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css}"
+	rel="stylesheet" />
+
+<!-- Custom Theme Style -->
+<link th:href="@{/build/css/custom.min.css}" rel="stylesheet">
+</head>
+
+<body class="nav-md footer_fixed">
+	<div class="container body">
+		<div class="main_container">
+			<div class="col-md-3 left_col">
+
+				<!-- Sidebar menu -->
+				<div layout:insert="~{fragments/sidebar_menu::sidebar}"></div>
+				<!-- /Sidebar menu -->
+
+			</div>
+
+			<!-- top navigation -->
+			<div layout:insert="~{fragments/top_nav::top_nav}"></div>
+			<!-- /top navigation -->
+
+			<!-- page content -->
+			<div class="right_col"
+				role="main">
+				<div class="">
+					<div class="page-title">
+						<div layout:fragment="page_content" class="title_left">
+							<h3>
+								Fixed Footer <small> Just add class <strong>footer_fixed</strong></small>
+							</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- /page content -->
+
+			<!-- footer content -->
+			<footer layout:insert="~{fragments/footer::footer}"></footer>
+			<!-- /footer content -->
+		</div>
+	</div>
+	<!-- Bottom scripts -->
+	<th:block layout:insert="~{fragments/scripts::basic_scripts}"></th:block>
+</body>
+</html>

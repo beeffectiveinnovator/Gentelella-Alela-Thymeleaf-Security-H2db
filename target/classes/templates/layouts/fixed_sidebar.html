@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="https://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- Meta, title, CSS, favicons, etc. -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title layout:title-pattern="$LAYOUT_TITLE - $CONTENT_TITLE">Gentelella
+	Alela! |</title>
+
+<!-- Bootstrap -->
+<link th:href="@{/vendors/bootstrap/dist/css/bootstrap.min.css}"
+	rel="stylesheet">
+<!-- Font Awesome -->
+<link th:href="@{/vendors/font-awesome/css/font-awesome.min.css}"
+	rel="stylesheet">
+<!-- NProgress -->
+<link th:href="@{/vendors/nprogress/nprogress.css}" rel="stylesheet">
+<!-- jQuery custom content scroller -->
+<link
+	th:href="@{/vendors/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css}"
+	rel="stylesheet">
+
+<!-- Custom Theme Style -->
+<link th:href="@{/build/css/custom.min.css}" rel="stylesheet">
+</head>
+
+<body class="nav-md">
+	<div class="container body">
+		<div class="main_container">
+			<div
+				class="col-md-3 left_col menu_fixed mCustomScrollbar _mCS_1 mCS-autoHide mCS_no_scrollbar"
+				style="overflow: visible;">
+				<div id="mCSB_1"
+					class="mCustomScrollBox mCS-minimal mCSB_vertical mCSB_outside"
+					style="max-height: 790px;" tabindex="0">
+					<div id="mCSB_1_container"
+						class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y"
+						style="position: relative; top: 0; left: 0;" dir="ltr">
+
+						<!-- Sidebar menu -->
+						<div layout:insert="~{fragments/sidebar_menu::sidebar}"></div>
+						<!-- /Sidebar menu -->
+						
+					</div>
+				</div>
+				<div id="mCSB_1_scrollbar_vertical"
+					class="mCSB_scrollTools mCSB_1_scrollbar mCS-minimal mCSB_scrollTools_vertical"
+					style="display: none;">
+					<div class="mCSB_draggerContainer">
+						<div id="mCSB_1_dragger_vertical" class="mCSB_dragger"
+							style="position: absolute; min-height: 50px; height: 709px; top: 0px; display: block; max-height: 756px;"
+							oncontextmenu="return false;">
+							<div class="mCSB_dragger_bar" style="line-height: 50px;"></div>
+						</div>
+						<div class="mCSB_draggerRail"></div>
+					</div>
+				</div>
+			</div>
+
+			<!-- top navigation -->
+			<div layout:insert="~{fragments/top_nav::top_nav}"></div>
+			<!-- /top navigation -->
+
+			<!-- page content -->
+			<div class="right_col" role="main" style="min-height: 762.8px;">
+				<div class="">
+					<div class="page-title">
+						<div layout:fragment="page_content" class="title_left">
+							<h3>
+								Fixed Sidebar <small> Just add class <strong>menu_fixed</strong></small>
+							</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- /page content -->
+
+			<!-- footer content -->
+			<footer layout:insert="~{fragments/footer::footer}"></footer>
+			<!-- /footer content -->
+		</div>
+	</div>
+	<th:block layout:insert="~{fragments/scripts::basic_scripts}"></th:block>
+
+</body>
+</html>

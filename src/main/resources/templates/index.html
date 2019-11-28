@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="https://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="layouts/dashboard1.html">
+<head>
+<title>Dashboard 1</title>
+</head>
+
+<body>
+	<!-- page content -->
+	<div layout:fragment="dashboard_content" class="right_col" role="main">
+		<!-- top tiles -->
+		<div layout:insert="~{fragments/top_tiles::top_tiles}"></div>
+		<!-- /top tiles -->
+
+
+		<div class="row">
+			<!-- Network Activities -->
+			<div layout:insert="~{fragments/12x12widgets::Network_activities}"></div>
+			<!-- /Network Activities -->
+		</div>
+
+		<br />
+
+		<div class="row">
+			<!-- App usage -->
+			<div layout:insert="~{fragments/4x4widgets::App_usage}"></div>
+			<!-- /App usage -->
+
+			<!-- Device Usage -->
+			<div layout:insert="~{fragments/4x4widgets::Device_usage}"></div>
+			<!-- /Device Usage -->
+
+			<!-- Quick Setting -->
+			<div layout:insert="~{fragments/4x4widgets::Quick_setting}"></div>
+			<!-- /Quick Setting -->
+		</div>
+
+		<div class="row">
+			<!-- Recent Activities -->
+			<div layout:insert="~{fragments/4x4widgets::Recent_activities}"></div>
+			<!-- /Recent Activities -->
+
+			<div class="col-md-8 col-sm-8 col-xs-12">
+				<div class="row">
+					<!-- Visitor location -->
+					<div layout:insert="~{fragments/12x12widgets::visitor_location}"></div>
+					<!-- /Visitor location -->
+				</div>
+				<div class="row">
+					<!-- Start to do list -->
+					<div layout:insert="~{fragments/6x6widgets::to_do_list}"></div>
+					<!-- End to do list -->
+
+					<!-- start of weather widget -->
+					<div layout:insert="~{fragments/6x6widgets::weather_widget}"></div>
+					<!-- end of weather widget -->
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /page content -->
+</body>
+</html>
