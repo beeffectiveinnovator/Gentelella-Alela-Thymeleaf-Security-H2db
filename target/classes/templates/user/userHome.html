@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{/layouts/fixed_sidebar.html}">
+<head>
+
+<title>User home</title>
+
+</head>
+<body>
+	<div layout:fragment="page_content" class="title_left">
+
+		<p class="admin-message-text text-center" th:utext="${userMessage}"></p>
+
+	</div>
+</body>
+</html>

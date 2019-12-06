@@ -1,4 +1,4 @@
-package com.Gentelella;
+package com.GentelellaAlela.Authorization.Configuration;
 
 import java.io.IOException;
 import java.util.Set;
@@ -20,12 +20,10 @@ public class CustomAuthenticationSuccessHandler implements AuthenticationSuccess
  
         Set<String> roles = AuthorityUtils.authorityListToSet(authentication.getAuthorities());
  
-        if (roles.contains("ROLE_ADMIN")) {
-            httpServletResponse.sendRedirect("/index");
-        } else if (roles.contains("ROLE_USER2") ) {
-            httpServletResponse.sendRedirect("/index2");
-        } else if (roles.contains("ROLE_USER3")) {
-        	httpServletResponse.sendRedirect("/index3");
+        if (roles.contains("ADMIN")) {
+            httpServletResponse.sendRedirect("admin/adminHome");
+        } else if (roles.contains("USER") ) {
+            httpServletResponse.sendRedirect("user/userHome");
         } else {
         	throw new IllegalStateException();
         }

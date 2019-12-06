@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	xmlns:th="https://www.thymeleaf.org"
+	layout:decorate="~{layouts/form.html}">
+<head>
+
+<title>Register</title>
+
+</head>
+
+<body>
+	<div layout:fragment="form" id="register" class="animate form">
+		<section class="login_content">
+			<form th:action="@{/register}" th:object="${user}" method="post">
+				<h1>Create Account</h1>
+				<div>
+					<label th:if="${#fields.hasErrors('name')}" th:errors="*{name}"
+						class="validation-message"></label> <input type="text"
+						class="form-control" th:field="*{name}" placeholder="First name"
+						required="required" />
+				</div>
+				<div>
+					<label th:if="${#fields.hasErrors('lastName')}"
+						th:errors="*{lastName}" class="validation-message"></label> <input
+						type="text" class="form-control" th:field="*{lastName}"
+						placeholder="Last name" required="required" />
+				</div>
+				<div>
+					<label th:if="${#fields.hasErrors('email')}" th:errors="*{email}"
+						class="validation-message"></label> <input type="email"
+						class="form-control" th:field="*{email}" placeholder="Email"
+						required="required" />
+				</div>
+				<div>
+					<label th:if="${#fields.hasErrors('password')}"
+						th:errors="*{password}" class="validation-message"></label> <input
+						type="password" class="form-control" th:field="*{password}"
+						placeholder="Password" required="required" />
+				</div>
+				<div>
+					<button type="submit" class="btn btn-default submit">Register
+						User</button>
+				</div>
+				<h2>
+					<span class="text-success" th:utext="${successMessage}"></span>
+				</h2>
+
+				<div class="clearfix"></div>
+
+				<div class="separator">
+					<p class="change_link">
+						Already a member ? <a th:href="@{/login}" class="to_register">
+							Log in </a>
+					</p>
+
+					<div class="clearfix"></div>
+					<br />
+
+					<div>
+						<h1>
+							<i class="fa fa-paw"></i> Gentelella Alela!
+						</h1>
+						<p>©2016 All Rights Reserved. Gentelella Alela! is a Bootstrap
+							3 template. Privacy and Terms</p>
+					</div>
+				</div>
+			</form>
+		</section>
+	</div>
+
+</body>
+</html>

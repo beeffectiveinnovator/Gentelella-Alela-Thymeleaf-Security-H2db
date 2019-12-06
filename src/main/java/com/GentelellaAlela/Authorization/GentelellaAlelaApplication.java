@@ -1,4 +1,4 @@
-package com.Gentelella;
+package com.GentelellaAlela.Authorization;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

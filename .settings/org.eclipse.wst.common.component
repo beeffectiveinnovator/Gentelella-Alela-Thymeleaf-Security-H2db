@@ -4,7 +4,7 @@
         <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
-        <property name="java-output-path" value="/Spring-boot-thymeleaf-security-jpa-mysql/target/classes"/>
-        <property name="context-root" value="Spring-boot-thymeleaf-security-jpa-mysql"/>
+        <property name="java-output-path" value="/GentelellaAlela+H2db/target/classes"/>
+        <property name="context-root" value="Gentelella-Alela-Authorization-H2db"/>
     </wb-module>
 </project-modules>

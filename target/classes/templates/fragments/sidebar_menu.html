@@ -25,7 +25,7 @@
 			</div>
 			<div class="profile_info">
 				<span>Welcome,</span>
-				<h2>John Doe</h2>
+				<span th:utext="${userName}">User name</span>
 			</div>
 		</div>
 		<!-- /menu profile quick info -->
@@ -142,7 +142,7 @@
 			</a> <a data-toggle="tooltip" data-placement="top" title="Lock"> <span
 				class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
 			</a> <a data-toggle="tooltip" data-placement="top" title="Logout"
-				th:href="@{/login}"> <span class="glyphicon glyphicon-off"
+				th:href="@{/logout}"> <span class="glyphicon glyphicon-off"
 				aria-hidden="true"></span>
 			</a>
 		</div>

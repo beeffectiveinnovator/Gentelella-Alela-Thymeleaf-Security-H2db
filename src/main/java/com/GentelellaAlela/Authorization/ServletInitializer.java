@@ -1,4 +1,4 @@
-package com.Gentelella;
+package com.GentelellaAlela.Authorization;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;

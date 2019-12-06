@@ -1,4 +1,4 @@
-package com.Gentelella;
+package com.GentelellaAlela.Authorization.Configuration;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{/layouts/fixed_sidebar.html}">
+<head>
+
+<title>Admin home</title>
+
+</head>
+<body>
+	<div layout:fragment="page_content" class="title_left">
+		<div class="panel-group" style="margin-top: 40px">
+			<div class="panel panel-primary">
+
+				<p class="admin-message-text text-center" th:utext="${adminMessage}"></p>
+			</div>
+		</div>
+
+	</div>
+</body>
+</html>

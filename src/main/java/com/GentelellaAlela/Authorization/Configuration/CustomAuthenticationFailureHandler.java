@@ -1,4 +1,4 @@
-package com.Gentelella;
+package com.GentelellaAlela.Authorization.Configuration;
 
 import java.io.IOException;
 
@@ -15,6 +15,6 @@ public class CustomAuthenticationFailureHandler implements AuthenticationFailure
 	public void onAuthenticationFailure(HttpServletRequest request, HttpServletResponse response,
 			AuthenticationException e) throws IOException, ServletException {
 		
-		response.sendRedirect("/errors/page_403");
+		response.sendRedirect("/errors/page_404");
 	}
 }
